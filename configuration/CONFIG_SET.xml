@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    File:
+        config_test.xml
+    Brief:
+        Define test setting content
+    Author:
+        Neo
+    History:
+        2020/11/13 - Initialization version
+-->
+
+<CONFIG_SET>
+
+    <!-- Module log level -->
+    <VERSION>
+        <PROG_VERSIN>1</PROG_VERSIN>
+        <PROG_SUB_VERSIN>1</PROG_SUB_VERSIN>
+        <SVN_REVERSIN>0000</SVN_REVERSIN>
+    </VERSION>
+
+    <TFTP_VERSION>
+        <PROG_VERSIN>1</PROG_VERSIN>
+        <PROG_SUB_VERSIN>0</PROG_SUB_VERSIN>
+    </TFTP_VERSION>
+
+    <SSH_VERSION>
+        <PROG_VERSIN>1</PROG_VERSIN>
+        <PROG_SUB_VERSIN>0</PROG_SUB_VERSIN>
+    </SSH_VERSION>
+
+    <LOGGER_INFO>
+        <MOD_LOG_LEVEL>
+            <CTRL>DEBUG</CTRL>
+        <!--
+            <CTRL>DEBUG</CTRL>
+        -->
+        </MOD_LOG_LEVEL>
+
+        <FORMAT>
+            <FILE>%(message)s</FILE>
+            <CONSOLE>%(message)s</CONSOLE>
+        </FORMAT>
+    </LOGGER_INFO>
+
+    <MAIN_BOARD>
+        <!-- Parameter setting -->
+        <TEST>True</TEST>
+        <SerialNumber>COM16</SerialNumber>
+        <SerialBaud>115200</SerialBaud>
+
+        <!-- Firmware Upgrade -->
+        <DUT_IP>192.168.1.20</DUT_IP>
+        <TFTP_SERVER_IP>192.168.1.100</TFTP_SERVER_IP>
+
+        <!--EMMC Image File Name-->
+        <EMMC_UPGRADE>True</EMMC_UPGRADE>
+        <NOR_IMAGE>firmware_lx2160ardb_rev2_uboot_xspiboot.img</NOR_IMAGE>
+        <BOOT_FILE>bootpartition_LS_arm64_lts_4.19_202012021002.tgz</BOOT_FILE>
+        <ROOT_FILE>rootfs_lsdk2004_ubuntu_main_arm64_202012021106.tgz</ROOT_FILE>
+        <EMMC_IMAGE>firmware_lx2160ardb_rev2_uboot_emmcboot.img</EMMC_IMAGE>
+
+        <!--SD Image File Name-->
+        <!--
+        <SD_TEST>True</SD_TEST>
+        <NOR_IMAGE>firmware_lx2160ardb_rev2_uboot_xspiboot.img</NOR_IMAGE>
+        <BOOT_FILE>bootpartition_LS_arm64_lts_4.19_202012021002.tgz</BOOT_FILE>
+        <ROOT_FILE>rootfs_lsdk2004_ubuntu_main_arm64_202012021106.tgz</ROOT_FILE>
+        <SD_IMAGE>firmware_lx2160ardb_rev2_uboot_sdboot.img</SD_IMAGE>
+        -->
+        <!--Ethernet Device Tree-->
+        <DLP_ETH>dpl-eth.19.dtb</DLP_ETH>
+
+    </MAIN_BOARD>
+
+</CONFIG_SET>
